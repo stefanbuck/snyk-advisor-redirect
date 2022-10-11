@@ -1,0 +1,27 @@
+{
+    "name": "snyk Advisor Redirect",
+    "description": "Redirect npmjs.com/packages/* requests to Snyk's Open Source Advisor!",
+    "manifest_version": 3,
+    "icons": {
+        "16": "assets/icon16.png",
+        "32": "assets/icon32.png",
+        "48": "assets/icon48.png",
+        "128": "assets/icon128.png"
+    },
+    "version": "1.0",
+    "declarative_net_request" : {
+      "rule_resources" : [{
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }]
+    },
+    "permissions": [
+      "declarativeNetRequest",
+      "declarativeNetRequestFeedback"
+    ],
+    "host_permissions": [
+      "https://npmjs.com/*",
+      "https://www.npmjs.com/*"
+    ]
+  }
